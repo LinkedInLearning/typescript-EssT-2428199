@@ -1,5 +1,7 @@
 {
     "compilerOptions": {
+        "allowJs": true,
+        "checkJs": true,
         "outDir": "build",
         "target": "esnext",
         "noEmit": true
