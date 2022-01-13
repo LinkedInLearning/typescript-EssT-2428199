@@ -1,22 +1,39 @@
+type ContactName = string;
+
+enum ContactStatus {
+    Active = "active",
+    Inactive = "inactive",
+    New = "new"
+}
+
 interface Contact {
     id: number;
-    name: string;
+    name: ContactName;
+    birthDate?: Date;
+    status?: ContactStatus;
 }
 
-interface UserContact<TExternalId> {
-    id: number
-    name: string
-    username: string
-    externalId: TExternalId
-    loadExternalId(): Task<TExternalId>
+interface Address {
+    line1: string;
+    line2: string;
+    province: string;
+    region: string;
+    postalCode: string;
 }
 
-function clone<T1, T2 extends T1>(source: T1): T2 {
-    return Object.apply({}, source);
+function getBirthDate(contact: Contact) {
+    if (typeof contact.birthDate === "number") {
+        return new Date(contact.birthDate);
+    }
+    else if (typeof contact.birthDate === "string") {
+        return Date.parse(contact.birthDate)
+    }
+    else {
+        return contact.birthDate
+    }
 }
 
-const a: Contact = { id: 123, name: "Homer Simpson" };
-const b = clone<Contact, UserContact>(a)
-
-const dateRange = { startDate: Date.now(), endDate: Date.now() }
-const dateRangeCopy = clone(dateRange)
+let primaryContact: Contact = {
+    id: 12345,
+    name: "Jamie Johnson"
+}
