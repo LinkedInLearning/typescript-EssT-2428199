@@ -1,6 +1,6 @@
 interface Contact {
     id: number;
-    name: string;
+    name: ContactName;
     birthDate?: Date;
 }
 
@@ -9,3 +9,5 @@ let primaryContact: Contact = {
     id: 12345,
     name: "Jamie Johnson",
 }
+
+type ContactName = string
