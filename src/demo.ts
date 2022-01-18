@@ -1,25 +1,34 @@
+const x = "string"
+const y = true
+console.log(typeof x) // --> "string"
+console.log(typeof y) // --> "boolean"
+
+
+
 type ContactName = string;
 type ContactStatus = "active" | "inactive" | "new"
 type ContactBirthDate = Date | number | string
 
-interface Contact  {
+interface Contact {
     id: number;
     name: ContactName;
     birthDate?: ContactBirthDate;
     status?: ContactStatus;
-    email: string;
 }
 
-let primaryContact: Contact = {
-    id: 12345,
-    name: "Jamie Johnson",
-    status: "active"
+function toContact(nameOrContact) {
+    if (typeof nameOrContact === "object") {
+        return {
+            id: nameOrContact.id,
+            name: nameOrContact.name,
+            status: nameOrContact.status
+        }
+    }
+    else {
+        return {
+            id: 0,
+            name: nameOrContact,
+            status: "active"
+        }
+    }
 }
-
-type ContactFields = keyof Contact
-
-function getValue<T, U extends keyof T>(source: T, propertyName: U) {
-    return source[propertyName]
-}
-
-const value = getValue({ min: 1, max: 200 }, "")
