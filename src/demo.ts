@@ -1,41 +1,36 @@
-const x = "string"
-const y = true
-console.log(typeof x) // --> "string"
-console.log(typeof y) // --> "boolean"
+type ContactStatus = "active" | "inactive" | "new";
 
-
-
-type ContactName = string;
-type ContactStatus = "active" | "inactive" | "new"
-type ContactBirthDate = Date | number | string
+interface Address {
+    street: string;
+    province: string;
+    postalCode: string;
+}
 
 interface Contact {
     id: number;
-    name: ContactName;
-    birthDate?: ContactBirthDate;
-    status?: ContactStatus;
+    name: string;
+    status: ContactStatus;
+    address: Address;
 }
 
-function toContact(nameOrContact: string | Contact): Contact {
-    if (typeof nameOrContact === "object") {
-        return {
-            id: nameOrContact.id,
-            name: nameOrContact.name,
-            status: nameOrContact.status
-        }
-    }
-    else {
-        return {
-            id: 0,
-            name: nameOrContact,
-            status: "active"
-        }
-    }
+interface ContactEvent {
+    contactId: number;
 }
 
-const myType = { min: 1, max: 200 }
+interface ContactDeletedEvent extends ContactEvent { 
+}
 
-function save(source: typeof myType) {}
+interface ContactStatusChangedEvent extends ContactEvent { 
+    oldStatus: ContactStatus;
+    newStatus: ContactStatus;
+}
 
+interface ContactEvents {
+    deleted: ContactDeletedEvent;
+    statusChanged: ContactStatusChangedEvent;
+    // ... and so on
+}
 
-
+function getValue<T, U extends keyof T>(source: T, propertyName: U) {
+    return source[propertyName];
+}
