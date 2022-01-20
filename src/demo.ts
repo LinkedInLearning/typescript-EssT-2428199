@@ -1,11 +1,3 @@
-let x: Record<string, string | number | boolean | Function> = { name: "Wruce Bayne" }
-x.number = 1234
-x.active = true
-x.log = () => console.log("awesome!")
-
-
-////////////////////
-
 type ContactStatus = "active" | "inactive" | "new";
 
 interface Address {
@@ -27,15 +19,7 @@ interface Query {
     matches(val): boolean;
 }
 
-type ContactQuery = 
-    Partial<
-        Pick<
-            Record<keyof Contact, Query>,
-            "id" | "name"
-        >
-    >
-
-type RequiredContactQuery = Required<ContactQuery>
+type ContactQuery = Partial<Record<keyof Contact, Query>>;
 
 function searchContacts(contacts: Contact[], query: ContactQuery) {
     return contacts.filter(contact => {
