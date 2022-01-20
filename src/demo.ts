@@ -21,12 +21,7 @@ function authorize(target: any, property: string, descriptor: PropertyDescriptor
             throw Error("User is not authenticated");
         }
 
-        try {
-            return wrapped.apply(this, arguments);
-        } catch (ex) {
-            // TODO: some fancy logging logic here
-            throw ex;
-        }
+        return wrapped.apply(this, arguments);
     }
 }
 
