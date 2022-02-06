@@ -1,7 +1,9 @@
 {
     "compilerOptions": {
-        "target": "esnext",
-        "noEmit": true
+        "target": "es6",
+        "outDir": "dist"
     },
-    "include": ["src/**/*"]
+    "include": [
+        "**.ts"
+    ]
 }
