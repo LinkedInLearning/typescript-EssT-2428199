@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+      "target": "ESNext",
+      "lib": ["ESNext", "DOM"],
+      "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
+  },
+  "exclude": ["**b.ts"]
+}
