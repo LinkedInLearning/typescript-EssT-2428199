@@ -1,1 +1,0 @@
-formatDate(new Date())

@@ -1,8 +1,8 @@
 interface Todo {
-    id: number,
-    title: string,
-    status: TodoStatus,
-    completedOn?: Date,
+    id: number
+    title: string
+    status: TodoStatus
+    completedOn?: Date
 }
 
 enum TodoStatus {

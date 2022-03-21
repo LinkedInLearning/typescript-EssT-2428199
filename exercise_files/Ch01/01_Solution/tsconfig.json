@@ -3,5 +3,7 @@
         "target": "ES6",
         "outDir": "dist"
     },
-    "include": ["**.ts"]
+    "include": [
+        "**.ts"
+    ]
 }
