@@ -44,11 +44,4 @@ Check out my other courses on [LinkedIn Learning](https://www.linkedin.com/learn
 
 [lil-course-url]: https://www.linkedin.com/learning/typescript-essential-training-14687057
 [lil-thumbnail-url]: https://cdn.lynda.com/course/2428199/2428199-1647545390894-16x9.jpg
-```
-
-## Installing
-1. To use these exercise files, you must have the following installed:
-	- [NodeJS](https://nodejs.org/en/) and npm (included in the NodeJS installer)
-    - Text editor of your choice - [VS Code](https://code.visualstudio.com) is highly recommended
-2. Clone this repository into your local machine using the terminal (Mac), CMD (Windows), or a GUI tool like SourceTree.
 
