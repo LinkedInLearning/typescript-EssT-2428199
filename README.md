@@ -1,9 +1,12 @@
 # TypeScript Essential Training
-This is the repository for the LinkedIn Learning course `TypeScript Essential Training`. The full course is available from [LinkedIn Learning][lil-course-url].
+This is the repository for the LinkedIn Learning course TypeScript Essential Training. The full course is available from [LinkedIn Learning][lil-course-url].
 
-![course-name-alt-text][lil-thumbnail-url] 
+![TypeScript Essential Training][lil-thumbnail-url] 
 
-_See the readme file in the main branch for updated instructions and information._
+TypeScript lets you write JavaScript the same way you always do. That’s because TypeScript compiles to plain JavaScript and works with any browser, any host, and any operating system. It adds a variety of helpful tools and syntax to an already mature language, bringing the power and productivity of open-source, object-oriented development to fully compatible, core JavaScript.
+
+In this course, Jess Chadwick teaches you how to leverage the full power of the TypeScript language in your JavaScript applications. Revisit some of the JavaScript fundamentals before turning to the data types, classes, generics, modules, and decorators that are unique to TypeScript. Get tips on defining complex types, extending and extracting metadata from existing types, and working with JavaScript modules to make your code more efficient. You can even try out your new TypeScript skills with the practice challenges along the way.
+
 ## Instructions
 This repository has branches for each of the videos in the course. You can use the branch pop up menu in github to switch to a specific branch and take a look at the course at that stage, or you can add `/tree/BRANCH_NAME` to the URL to go to the branch you want to access.
 
@@ -19,14 +22,8 @@ When switching from one exercise files branch to the next after making changes t
 
 To resolve this issue:
 	
-1. Add changes to git using this command: 
-````
-git add .
-````
-2. Commit changes using this command: 
-```
-git commit -m "some message"
-```
+    Add changes to git using this command: git add .
+	Commit changes using this command: git commit -m "some message"
 
 ## Installing
 1. To use these exercise files, you must have the following installed:
@@ -35,8 +32,23 @@ git commit -m "some message"
 2. Clone this repository into your local machine using the terminal (Mac), CMD (Windows), or a GUI tool like SourceTree.
 
 
-[0]: # (Replace these placeholder URLs with actual course URLs)
+### Instructor
 
-[lil-course-url]: https://www.linkedin.com/learning/
-[lil-thumbnail-url]: http://
+Jess Chadwick 
+                            
+Full-Stack Web Developer
+
+                            
+
+Check out my other courses on [LinkedIn Learning](https://www.linkedin.com/learning/instructors/jess-chadwick).
+
+[lil-course-url]: https://www.linkedin.com/learning/typescript-essential-training-14687057
+[lil-thumbnail-url]: https://cdn.lynda.com/course/2428199/2428199-1647545390894-16x9.jpg
+```
+
+## Installing
+1. To use these exercise files, you must have the following installed:
+	- [NodeJS](https://nodejs.org/en/) and npm (included in the NodeJS installer)
+    - Text editor of your choice - [VS Code](https://code.visualstudio.com) is highly recommended
+2. Clone this repository into your local machine using the terminal (Mac), CMD (Windows), or a GUI tool like SourceTree.
 
