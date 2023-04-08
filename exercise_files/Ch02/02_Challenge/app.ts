@@ -19,7 +19,7 @@ function addTodoItem(todo) {
 }
 
 function getNextId(items) {
-    return items.reduce((max, x) => x.id > max ? max : x.id, 0) + 1
+    return items.reduce((max, x) => x.id > max ? x.id : max, 0) + 1
 }
 
 const newTodo = addTodoItem("Buy lots of stuff with all the money we make from the app")
